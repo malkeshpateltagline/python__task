@@ -12,12 +12,13 @@ print('\nword_trees = {}'.format(word_trees))
 print('\nNumber of time each word appears : ')
 occurrence={}
 sentences=[]
+
 for i in word_trees:
-    sentences+=i
+    sentences.extend(i)
     
 for i in sentences:
-        res = op.countOf(sentences,i)
-        occurrence[i]=res
+    res = op.countOf(sentences,i)
+    occurrence[i]=res
         
 print(occurrence)
            
