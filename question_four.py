@@ -8,11 +8,12 @@ def memoize(k):
         return fast[l] 
     return partner 
 
+@memoize
 def fibonacci(n): 
     if (n<=1): 
         return n  
     return (fibonacci(n-1) + fibonacci(n-2))  
-fibonacci = memoize(fibonacci)
+#fibonacci = memoize(fibonacci)
 
 nterms = int(input('\nEnter Number : '))
 
@@ -25,11 +26,11 @@ else:
 
 #Create a recursion function that calculate the sum of numbers present in the list.
 
-def getSum(lst):
+def getsum(lst):
     
     if len(lst)==0:
         return 0
     else:
-        return lst[0] + getSum(lst[1:])
+        return lst[0] + getsum(lst[1:])
     
-print(f'\n{getSum([23, 44, 5, 67, 1, 1, 2, 4, 5])}\n')
+print(f'\n{getsum([23, 44, 5, 67, 1, 1, 2, 4, 5])}\n')
