@@ -60,8 +60,3 @@ for i in range(1, num + 1):
     print('*' * und_sco + ' ' * stars + '*' * und_sco)
 
 print('\n') 
-
-
-
-
-
